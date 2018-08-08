@@ -4,6 +4,22 @@
 	<title>Snake Game With Canvas</title>
 </head>
 <body>
+<canvas id="gameCanvas" height="300" width="300"></canvas>
 
+<script type="text/javascript">
+  /** constantes **/
+  const CANVAS_BORDER_COLOUR = '#000';
+  const CANVAS_BACKGROUND_COLOUR = '#fff';
+  /** se obtiene el canvas **/
+  var gameCanvas = document.getElementById("gameCanvas");
+  /** se define el canvas como un escenario 2D y se almacena en una variable **/
+  var ctx = gameCanvas.getContext("2d");
+  /** se asigna el fondo y borde con los valores de las constantes **/
+  ctx.fillStyle = CANVAS_BACKGROUND_COLOUR;
+  ctx.strokestyle = CANVAS_BORDER_COLOUR;
+  /** se pintan el relleno y el borde del canvas **/
+  ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
+  ctx.strokeRect(0, 0, gameCanvas.width, gameCanvas.height);
+</script>
 </body>
 </html>
